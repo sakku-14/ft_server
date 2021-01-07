@@ -8,3 +8,6 @@ https://docs.docker.jp/develop/develop-images/dockerfile_best-practices.html
 1/5 60% 課題に必要分は読破
 
 サーバー内でWP, MYSQL, PHPMYADMINの設定？ができない
+
+1/7	サーバー内で必要なもののインストール
+	nginxの起動＆ブラウザでその確認
