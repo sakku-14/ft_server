@@ -2,7 +2,8 @@ FROM debian:buster
 RUN	set -ex; \
 		apt update -y; \
 		apt upgrade -y; \
-		apt-get install nginx \
+		apt-get install -y --no-install-recommends \
+		nginx \
 		mariadb-server \
 		mariadb-client \
 		php-cgi \
@@ -20,7 +21,7 @@ RUN	set -ex; \
 		unzip \
 		wget \
 		git \
-		vim -y;
+		vim;
 #		rm -rf /var/lib/apt/lists
 #RUN apt-get update && apt-get install -y nginx
 #EXPOSE 8080 433
