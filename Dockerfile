@@ -20,9 +20,15 @@ RUN	set -ex; \
 			php-mysql \
 			php-bcmath \
 			unzip \
+			supervisor \
 			wget \
-			vim;
-#		rm -rf /var/lib/apt/lists
-#RUN apt-get update && apt-get install -y nginx
-#EXPOSE 8080 433
-CMD ["nginx", "-g", "daemon off;"]
+			vim; \
+		rm -rf /var/lib/apt/lists/*
+
+RUN	set -eux;
+		service mysql start; \
+		mysql -e "CREATE DATABASE wpdb;"; \
+		mysql -e "CREATE USER 'wpuser'@'localhost' IDENTIFIED BY 'dbpassword';"; \
+		mysql -e "GRANT ALL ON wpdb.* TO 'wpuser'@'localhost';"
+
+
