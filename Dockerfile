@@ -2,9 +2,10 @@ FROM debian:buster
 RUN	set -ex; \
 		apt-get update; \
 		apt-get install -y --no-install-recommends \
+			apt-utils \
 			ca-certificates \
-			mariadb-server \
 			mariadb-client \
+			mariadb-server \
 			nginx \
 			php-cgi \
 			php-common \
@@ -18,7 +19,6 @@ RUN	set -ex; \
 			php-gettext \
 			php-mysql \
 			php-bcmath \
-			unzip \
 			supervisor \
 			wget; \
 		rm -rf /var/lib/apt/lists/*
@@ -28,7 +28,7 @@ ENV	USER		wpuser
 ENV	HOST		localhost
 ENV	PASSWORD	dbpassword
 
-RUN	set -eux;
+RUN	set -eux; \
 		service mysql start; \
 		mysql -e "CREATE DATABASE $DB;"; \
 		mysql -e "CREATE USER '$USER'@'$HOST' IDENTIFIED BY '$PASSWORD';"; \
@@ -40,20 +40,20 @@ ENV	WP_PATH	/var/www/html/wordpress
 RUN	set -eux; \
 		wget -O wordpress.tar.gz "$WP_URL"; \
 		mkdir -p "$WP_PATH"; \
-		tar -xzf wordpress.tar.gz -C "WP_PATH" --strip-components=1; \
+		tar -xzf wordpress.tar.gz -C "$WP_PATH" --strip-components=1; \
 		rm wordpress.tar.gz; \
-		chown -R www-data:www-data "WP_PATH"
+		chown -R www-data:www-data "$WP_PATH"
 
-COPY	./srcs/wp-config.php "WP_PATH/wp-config.php"
+COPY	./srcs/wp-config.php "$WP_PATH/wp-config.php"
 
 RUN	chmod 777 "$WP_PATH/wp-config.php"
 
 ENV	PHPMA_VER	5.0.2
-ENV	PHPMA_URL	https://files.phpmyadmin.net/phpMyAdmin/$PHPMYADMIN_VERSION/phpMyAdmin-$PHPMYADMIN_VERSION-all-languages.tar.gz
+ENV	PHPMA_URL	https://files.phpmyadmin.net/phpMyAdmin/$PHPMA_VER/phpMyAdmin-$PHPMA_VER-all-languages.tar.gz
 ENV	PHPMA_PATH	/var/www/html/phpmyadmin
 
 RUN	set -eux; \
-		wget -O phpmyadmin.tar.gz "PHPMA_URL"; \
+		wget -O phpmyadmin.tar.gz "$PHPMA_URL"; \
 		mkdir -p "$PHPMA_PATH"; \
 		tar -xzf phpmyadmin.tar.gz -C "$PHPMA_PATH" --strip-components=1; \
 		rm phpmyadmin.tar.gz
@@ -64,7 +64,7 @@ ENV	CSR	server.csr
 ENV	CRT	server.crt
 
 RUN	set -eux; \
-		mkdir -p "SSL_PATH"; \
+		mkdir -p "$SSL_PATH"; \
 		openssl genrsa -out "$SSL_PATH/$KEY" 2048; \
 		openssl req -new \
 			-subj "/C=JP/ST=Tokyo/L=Minato-ku/O=42Tokyo/OU=42cursus/CN=localhost" \
@@ -85,9 +85,9 @@ ENV	E_KIT_PATH	/bin
 
 RUN	set -eux; \
 		wget -O entrykit.tgz "$E_KIT_URL"; \
-		tar -xzf entrykit.tgz -C "E_KIT_PATH"; \
+		tar -xzf entrykit.tgz -C "$E_KIT_PATH"; \
 		rm entrykit.tgz; \
-		chmod +x "E_KIT_PATH/entrykit"; \
+		chmod +x "$E_KIT_PATH/entrykit"; \
 		entrykit --symlink
 
 COPY	./srcs/default.tmpl /etc/nginx/sites-available/default.tmpl
