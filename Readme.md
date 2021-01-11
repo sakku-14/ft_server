@@ -24,3 +24,5 @@ https://techracho.bpsinc.jp/morimorihoge/2017_06_05/40936
 
 1/7	サーバー内で必要なもののインストール
 	nginxの起動＆ブラウザでその確認
+
+1/11 autoindexがなんたるか理解した
