@@ -27,6 +27,8 @@ https://blog.nagatech.work/post/network/164
 ■nginx-default
 https://qiita.com/morrr/items/7c97f0d2e46f7a8ec967
 https://qiita.com/syou007/items/3e2d410bbe65a364b603
+about try_files
+https://qiita.com/kaikusakari/items/cc5955a57b74d5937fd8
 
 サーバー内でWP, MYSQL, PHPMYADMINの設定？ができない
 
