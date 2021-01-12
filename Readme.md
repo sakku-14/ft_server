@@ -34,6 +34,9 @@ https://mogile.web.fc2.com/nginx_wiki/start/topics/tutorials/config_pitfalls/
 https://qiita.com/inakadegaebal/items/d59fa99d2ee66a4ffe98
 ---about try_files
 https://gist.github.com/kenjiskywalker/4596258
+---about nginx fondation
+http://www2.matsue-ct.ac.jp/home/kanayama/text/nginx/node15.html
+
 サーバー内でWP, MYSQL, PHPMYADMINの設定？ができない
 
 1/7	サーバー内で必要なもののインストール
