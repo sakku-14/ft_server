@@ -24,6 +24,8 @@ https://qiita.com/macotok/items/04cf14417d63f04ef91d
 ■chown -R www-data:www-data... の理由
 https://blog.nagatech.work/post/network/164
 
+■nginx-default
+https://qiita.com/morrr/items/7c97f0d2e46f7a8ec967
 
 サーバー内でWP, MYSQL, PHPMYADMINの設定？ができない
 
