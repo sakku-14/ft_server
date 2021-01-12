@@ -27,12 +27,13 @@ https://blog.nagatech.work/post/network/164
 ■nginx-default
 https://qiita.com/morrr/items/7c97f0d2e46f7a8ec967
 https://qiita.com/syou007/items/3e2d410bbe65a364b603
-about try_files
+---about try_files
 https://qiita.com/kaikusakari/items/cc5955a57b74d5937fd8
 https://mogile.web.fc2.com/nginx_wiki/start/topics/tutorials/config_pitfalls/
-about connect php to nginx
+---about connect php to nginx
 https://qiita.com/inakadegaebal/items/d59fa99d2ee66a4ffe98
-
+---about try_files
+https://gist.github.com/kenjiskywalker/4596258
 サーバー内でWP, MYSQL, PHPMYADMINの設定？ができない
 
 1/7	サーバー内で必要なもののインストール
