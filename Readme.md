@@ -21,6 +21,9 @@ https://techracho.bpsinc.jp/morimorihoge/2017_06_05/40936
 ■mysqlコマンド
 https://qiita.com/macotok/items/04cf14417d63f04ef91d
 
+■chown -R www-data:www-data... の理由
+https://blog.nagatech.work/post/network/164
+
 
 サーバー内でWP, MYSQL, PHPMYADMINの設定？ができない
 
