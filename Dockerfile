@@ -7,18 +7,18 @@ RUN	set -ex; \
 			mariadb-client \
 			mariadb-server \
 			nginx \
+			php-bcmath \
 			php-cgi \
 			php-common \
 			php-fpm \
-			php-pear \
-			php-mbstring \
-			php-zip \
-			php-net-socket \
 			php-gd \
-			php-xml-util \
 			php-gettext \
+			php-mbstring \
 			php-mysql \
-			php-bcmath \
+			php-net-socket \
+			php-pear \
+			php-xml-util \
+			php-zip \
 			supervisor \
 			wget; \
 		rm -rf /var/lib/apt/lists/*
