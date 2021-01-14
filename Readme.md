@@ -23,6 +23,7 @@ https://qiita.com/macotok/items/04cf14417d63f04ef91d
 
 ■chown -R www-data:www-data... の理由
 https://blog.nagatech.work/post/network/164
+https://qiita.com/Ouvill/items/02faa51d04b76c60d942
 
 ■nginx-default
 https://qiita.com/morrr/items/7c97f0d2e46f7a8ec967
