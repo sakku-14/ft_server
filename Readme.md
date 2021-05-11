@@ -4,23 +4,17 @@
 
 
 ## Requirement
-- gcc compiler
+- Docker
 
 ## Usage
 Clone this repository:
 ```shell
-git clone https://github.com/sakku-14/get_next_line
+git clone https://github.com/sakku-14/ft_server
 ```
 
-## Note
 
-| function name |  |
-| ---- | ---- |
-| Prototype |  |
-| Parameters |  |
-| Return value |  |
-| External functs |  |
-| Description |  | 
+
+## Note
 
 ## Author
 - Yuki Sakuma
