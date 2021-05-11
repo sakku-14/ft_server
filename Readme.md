@@ -22,19 +22,19 @@ Create the container:
 docker run -d -p 8080:80 -p 443:443 <image-name>
 ```
 
-Open nginx top page:
-```shell:Url
+Open nginx top page on your browser:
+```
 https://127.0.0.1/
 ```
 Then click ***Advanced***. After that click ***Accept the Risk and Continue***. Finally you are welcome to nginx!
 
-Open wordpress page:
-```shell:Url
+Open wordpress page on your browser:
+```
 https://127.0.0.1/wordpress/
 ```
 
-Open phpmyadmin page:
-```shell:Url
+Open phpmyadmin page on your browser:
+```
 https://127.0.0.1/phpmyadmin/
 ```
 
