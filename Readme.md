@@ -23,19 +23,19 @@ docker run -d -p 8080:80 -p 443:443 <image-name>
 ```
 
 Open nginx top page:
-```
-"https://127.0.0.1/" on any browser
+```shell:Url
+https://127.0.0.1/
 ```
 Then click ***Advanced***. After that click ***Accept the Risk and Continue***. Finally you are welcome to nginx!
 
 Open wordpress page:
-```
-"https://127.0.0.1/wordpress/" on any browser
+```shell:Url
+https://127.0.0.1/wordpress/
 ```
 
 Open phpmyadmin page:
-```
-"https://127.0.0.1/phpmyadmin/" on any browser
+```shell:Url
+https://127.0.0.1/phpmyadmin/
 ```
 
 ## Note
